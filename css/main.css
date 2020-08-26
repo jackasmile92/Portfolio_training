@@ -1,16 +1,16 @@
-.header .container, .about .container, .skills .container, .portfolio .container {
+.header .container, .about .container, .skills .container, .portfolio .container, .footer .container {
   margin-left: 165px;
   margin-top: 93px;
   position: absolute;
 }
 
-.header__top, .header__top-menu, .skills__inner, .skills__table-row, .portfolio__slide, .portfolio__album {
+.header__top, .header__top-menu, .skills__inner, .skills__table-row, .portfolio__slide, .portfolio__album, .portfolio__nav, .footer__links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.title, .header__top-link, .header__bottom, .about__text, .skills__table, .portfolio__slide-inner {
+.title, .header__top-link, .header__bottom, .about__text, .skills__table, .portfolio__slide-inner, .footer__link {
   font-family: Libre Franklin;
   font-style: normal;
 }
@@ -221,6 +221,7 @@ html {
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
+  text-align: justify;
 }
 
 .portfolio__album {
@@ -231,6 +232,27 @@ html {
 
 .portfolio__album-col {
   margin-right: 30px;
+}
+
+.portfolio__nav {
+  position: absolute;
+  margin-top: 653px;
+  margin-left: 189px;
+  width: 62px;
+}
+
+.portfolio__nav-cevron {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+}
+
+.portfolio__nav-cevron--right {
+  transform: rotate(90deg);
+}
+
+.portfolio__nav-cevron--left {
+  transform: rotate(270deg);
 }
 
 .ux__img {
@@ -257,4 +279,35 @@ html {
 .ux__img--four {
   width: 255px;
   height: 144px;
+}
+
+.footer {
+  width: 1440px;
+  height: 528px;
+  background-color: #FFFAF2;
+}
+
+.footer__links {
+  margin-top: 51px;
+  width: 928px;
+}
+
+.footer__links-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #333333;
+  margin-bottom: 14px;
+}
+
+.footer__nav {
+  position: absolute;
+  margin-left: 1238px;
+  margin-top: 434px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
 }

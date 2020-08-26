@@ -270,6 +270,7 @@ $header_height: 768px;
             font-weight: normal;
             font-size: 18px;
             line-height: 30px;
+            text-align: justify
         }
     }
 
@@ -282,6 +283,28 @@ $header_height: 768px;
         &-col {
             margin-right: 30px
         }
+    }
+
+    &__nav {
+        position: absolute;
+        margin-top: 653px;
+        margin-left: 189px;
+        width: 62px;
+        @extend %flex_row;
+
+        &-cevron {
+            width: 24px;
+            height: 24px;
+            align-items: center;
+
+            &--right {
+                transform: rotate(90deg);
+            }
+            &--left {
+                transform: rotate(270deg);
+            }
+        }
+
     }
 }
 
@@ -308,5 +331,42 @@ $header_height: 768px;
     &--four {
         width: 255px;
         height: 144px;
+    }
+}
+
+.footer {
+    width: $main_width;
+    height: 528px;
+    background-color: $bkg_peach;
+
+    .container {
+        @extend %container_marg;
+    }
+
+    &__links {
+        margin-top: 51px;
+        width: 928px;
+        @extend %flex_row;
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        @extend %libre_font;
+        text-decoration: none;
+        color: $font_dark;
+        margin-bottom: 14px;
+    }
+
+    &__nav {
+        position: absolute;
+        margin-left: 1238px;
+        margin-top: 434px;
+        width: 24px;
+        height: 24px;
+        align-items: center;
     }
 }
