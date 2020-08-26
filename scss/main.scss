@@ -236,3 +236,77 @@ $header_height: 768px;
         }
     }
 }
+
+
+.portfolio {
+    width: $main_width;
+    height: 882px;
+    background-color: $bkg_white;
+
+    .container {
+        @extend %container_marg;
+    }
+
+    &__slide {
+        @extend %flex_row;
+        justify-content: flex-start;
+        margin-top: 86px;
+
+        &-inner {
+            width: 349px;
+            height: 210px;
+            @extend %libre_font;
+            color: $font_dark;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &-text {
+            margin-top: 48px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    &__album {
+        @extend %flex_row;
+        width: 635px;
+        margin-left: 125px;
+        margin-top: 54px;
+
+        &-col {
+            margin-right: 30px
+        }
+    }
+}
+
+.ux__img {
+    background-color: $img_bkg;
+    margin-bottom: 26px;
+    margin-top: 0px;
+
+    &--one {
+        width: 350px;
+        height: 144px;
+    }
+
+    &--two {
+        width: 350px;
+        height: 233px;
+    }
+
+    &--three {
+        width: 255px;
+        height: 233px;
+    }
+
+    &--four {
+        width: 255px;
+        height: 144px;
+    }
+}

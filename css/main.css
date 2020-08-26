@@ -1,16 +1,16 @@
-.header .container, .about .container, .skills .container {
+.header .container, .about .container, .skills .container, .portfolio .container {
   margin-left: 165px;
   margin-top: 93px;
   position: absolute;
 }
 
-.header__top, .header__top-menu, .skills__inner, .skills__table-row {
+.header__top, .header__top-menu, .skills__inner, .skills__table-row, .portfolio__slide, .portfolio__album {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.title, .header__top-link, .header__bottom, .about__text, .skills__table {
+.title, .header__top-link, .header__bottom, .about__text, .skills__table, .portfolio__slide-inner {
   font-family: Libre Franklin;
   font-style: normal;
 }
@@ -191,4 +191,70 @@ html {
 
 .skills__table-value--fed {
   width: 286px;
+}
+
+.portfolio {
+  width: 1440px;
+  height: 882px;
+  background-color: #fff;
+}
+
+.portfolio__slide {
+  justify-content: flex-start;
+  margin-top: 86px;
+}
+
+.portfolio__slide-inner {
+  width: 349px;
+  height: 210px;
+  color: #333333;
+}
+
+.portfolio__slide-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.portfolio__slide-text {
+  margin-top: 48px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.portfolio__album {
+  width: 635px;
+  margin-left: 125px;
+  margin-top: 54px;
+}
+
+.portfolio__album-col {
+  margin-right: 30px;
+}
+
+.ux__img {
+  background-color: #C66C49;
+  margin-bottom: 26px;
+  margin-top: 0px;
+}
+
+.ux__img--one {
+  width: 350px;
+  height: 144px;
+}
+
+.ux__img--two {
+  width: 350px;
+  height: 233px;
+}
+
+.ux__img--three {
+  width: 255px;
+  height: 233px;
+}
+
+.ux__img--four {
+  width: 255px;
+  height: 144px;
 }
