@@ -1,0 +1,238 @@
+$main_width: 1440px;
+$leftmarg: 165px;
+$topmarg: 93px;
+
+$header_clr:#C66C49;
+$img_bkg:#C66C49;
+
+$font_title-color:#333333;
+$font_title-white: #fff;
+$font_white: #fff;
+$font_dark:#333333;
+
+$bkg_white: #fff;
+$bkg_peach:#FFFAF2;
+
+$grf_bkg:#F5D6AB;
+$grf_top: #C66C49;
+
+%container_marg {
+    margin-left: $leftmarg;
+    margin-top: $topmarg;
+    position: absolute;
+}
+
+%flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+%libre_font {
+    font-family: Libre Franklin;
+    font-style: normal;
+}
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+:focus {
+    outline: none;
+}
+
+#page-wrap {
+    width: $main_width;
+    margin: 0 auto;
+}
+
+
+.title {
+    @extend %libre_font;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $font_title-color;
+
+    &--white {
+        color: $font_title-white;
+    }
+}
+
+$header_height: 768px;
+
+.header {
+    width: $main_width;
+    height: $header_height;
+    background-image: url(../src/img/bg.png);
+    background-size: $main_width auto;
+
+    &__background {
+        position: absolute;
+        width: $main_width;
+        height: $header_height;
+
+        background-color: $header_clr;
+        opacity: 0.3;
+    }
+
+    .container {
+        @extend %container_marg;
+    }
+
+    &__top {
+        width: 1109px;
+        height: 29px;
+        @extend %flex_row;
+        align-items: baseline;
+    }
+
+    &__top-menu {
+        width: 529px;
+        height: 22px;
+        @extend %flex_row;
+    }
+
+    &__top-link {
+        color: $font_white;
+        @extend %libre_font;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+
+        &--active {
+            font-weight: bold;
+        }
+    }
+
+    &__bottom {
+        margin-top: 145px;
+        width: 694px;
+        height: 261px;
+        @extend %libre_font;
+        color: $font_white;
+
+        &-title {
+            font-size: 64px;
+            line-height: 78px;
+        }
+
+        &-text {
+            margin-top: 26px;
+            margin-bottom: 106px;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &-link {
+            font-size: 18px;
+            line-height: 22px;
+            color: $font_white;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+.about {
+    width: $main_width;
+    height: 544px;
+    background-color: $bkg_white;
+
+    .container {
+        @extend %container_marg;
+    }
+
+    &__text {
+        width: 1107px;
+        @extend %libre_font;
+        font-size: 18px;
+        line-height: 30px;
+        color: $font_dark;
+        text-align: justify;
+
+        &-part {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.skills {
+    width: $main_width;
+    height: 693px;
+    background-color: $bkg_peach;
+
+    .container {
+        @extend %container_marg;
+    }
+
+    &__inner {
+        @extend %flex_row;
+        margin-top: 86px;
+    }
+
+    &__photo {
+        background-color: $img_bkg;
+        width: 350px;
+        height: 340px;
+
+        &-img {
+            width: 350px;
+            height: 340px;
+        }
+    }
+
+    &__table {
+        margin-left: 125px;
+        @extend %libre_font;
+
+        &-row {
+            @extend %flex_row;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        &-body {
+            margin-top: 65px;
+        }
+
+        &-item {
+            width: 123px;
+            margin-right: 66px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &-graph {
+            background-color: $grf_bkg;
+            width: 446px;
+            height: 24px;
+        }
+
+        &-value {
+            background-color: $grf_top;
+            height: 24px;
+
+            &--ux {
+                width: 381px;
+            }
+
+            &--ui {
+                width: 351px;
+            }
+
+            &--fed {
+                width: 286px;
+            }
+        }
+    }
+}
